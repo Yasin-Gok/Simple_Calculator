@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/text"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/EditText1"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginBottom="26dp"
+        android:ems="20"
+        android:hint="Sayı 1"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColorHint="#E91E63"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/EditText2"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="48dp"
+        android:ems="10"
+        android:hint="Sayı 2"
+        android:inputType="number|textPersonName"
+        android:textAlignment="center"
+        android:textColorHint="#E91E63"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/Sonuc"
+        app:layout_constraintEnd_toEndOf="@+id/Sonuc"
+        app:layout_constraintStart_toStartOf="@+id/Sonuc"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <TextView
+        android:id="@+id/Sonuc"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginBottom="185dp"
+        android:hint="Sonuç"
+        android:textAlignment="center"
+        android:textColorHint="@color/purple_700"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/YazarText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EditText2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="48dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/EditText2"
+        app:layout_constraintEnd_toEndOf="@+id/EditText2"
+        app:layout_constraintStart_toStartOf="@+id/EditText2"
+        app:layout_constraintTop_toBottomOf="@+id/EditText1">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="Toplama"
+            android:text="+"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="Cikarma"
+            android:text="-"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="Carpma"
+            android:text="x"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:onClick="Bolme"
+            android:text="/"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/YazarText"
+        android:layout_width="144dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="39dp"
+        android:freezesText="false"
+        android:text="Yasin Gök  07.01.2022"
+        android:textAlignment="center"
+        android:textColor="@color/purple_700"
+        android:textIsSelectable="true"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sonuc" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
